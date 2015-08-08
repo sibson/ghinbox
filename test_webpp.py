@@ -19,7 +19,7 @@ class PostMarkInboundWebhookTestCase(GHInboxTestCase):
         super(PostMarkInboundWebhookTestCase, self).setUp()
         app.config['ghuser'] = 'testuser'
         app.config['ghpassword'] = 'testpassword'
-        app.config['ghrepo'] = 'testuser/testrepo'
+        app.config['ghrepository'] = 'testuser/testrepo'
 
     def test_creates_issue(self, login):
         data = {

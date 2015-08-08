@@ -10,9 +10,15 @@ app = Flask(__name__)
 app.config['DEBUG'] = os.environ.get('DEBUG') in ('1', 'y', 'True', 'true')
 app.config['ghuser'] = os.environ.get('GH_USERNAME')
 app.config['ghpassword'] = os.environ.get('GH_PASSWORD')
-app.config['ghrepo'] = os.environ.get('GH_REPO')
+app.config['ghrepository'] = os.environ.get('GH_REPOSITORY')
 
 logger = structlog.get_logger()
+
+
+def create_issue(title, body):
+    gh = login(app.config['ghuser'], app.config['ghpassword'])
+    repo = gh.repository(*app.config['ghrepository'].split('/'))
+    repo.create_issue(title, body)
 
 
 @app.route('/hooks/postmark', methods=['POST'])
@@ -25,12 +31,13 @@ def postmark_incomming_hook():
     title = inbound['Subject']
     body = inbound['TextBody']
 
+    logger.debug('creating issue', title=title)
+
     # TODO taskify
-    gh = login(app.config['ghuser'], app.config['ghpassword'])
-    repo = gh.repository(*app.config['ghrepo'].split('/'))
-    repo.create_issue(title, body)
+    create_issue(title, body)
 
     return 'OK'
+
 
 if __name__ == '__main__':
     from structlog.stdlib import LoggerFactory
