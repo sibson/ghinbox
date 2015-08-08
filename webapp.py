@@ -22,7 +22,7 @@ def postmark_incomming_hook():
 
     logger.debug('postmark', data=inbound)
 
-    title = inbound['subject']
+    title = inbound['Subject']
     body = inbound['TextBody']
 
     # TODO taskify

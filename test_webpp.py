@@ -23,7 +23,7 @@ class PostMarkInboundWebhookTestCase(GHInboxTestCase):
 
     def test_creates_issue(self, login):
         data = {
-            'subject': 'A test',
+            'Subject': 'A test',
             'TextBody': 'Text Body',
         }
         self.app.post('/hooks/postmark', data=json.dumps(data), content_type='application/json')
