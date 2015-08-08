@@ -1,0 +1,26 @@
+{
+    "name": "ghinbox",
+    "description": "GitHub Email Gateway - create issues via email",
+    "website": "https://github.com/sibson/ghinbox",
+    "repository": "https://github.com/sibson/ghinbox",
+    "keywords": [
+        "productivity",
+        "email",
+        "git"
+    ],
+    "addons": [
+        "postmark"
+    ],
+    "env": {
+        "GH_USERNAME": {
+            "description": "User to login to Github with"
+        },
+        "GH_PASSWORD": {
+            "description": "Password to login with, may need an application token if using 2FA"
+        },
+        "GH_REPOSITORY": {
+            "description": "The username/repository to post new issues too"
+        }
+    },
+    "generator": "https://www.expeditedssl.com/heroku-button-maker"
+}
