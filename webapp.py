@@ -8,11 +8,6 @@ from flask import Flask, got_request_exception
 
 from ghinbox import app
 
-app.config['DEBUG'] = os.environ.get('DEBUG') in ('1', 'y', 'True', 'true')
-app.config['ghuser'] = os.environ.get('GH_USERNAME')
-app.config['ghpassword'] = os.environ.get('GH_PASSWORD')
-app.config['ghrepository'] = os.environ.get('GH_REPOSITORY')
-
 logger = structlog.get_logger()
 
 
@@ -20,7 +15,7 @@ logger = structlog.get_logger()
 def init_rollbar():
     rollbar.init(
         # access token for the demo app: https://rollbar.com/demo
-        os.environ.get('ROLLBAR_ACCESS_TOKEN'),
+        app.config['ROLLBAR_ACCESS_TOKEN'],
         # environment name
         'production',
         # server root directory, makes tracebacks prettier

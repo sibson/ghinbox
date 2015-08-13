@@ -9,6 +9,7 @@
         "git"
     ],
     "addons": [
+        "heroku-redis",
         "papertrail",
         "postmark",
         "rollbar"

@@ -3,7 +3,7 @@ from flask import request
 from structlog import get_logger
 
 from ghinbox import app
-from ghinbox.actions import create_issue
+from ghinbox.tasks import create_issue
 
 
 logger = get_logger()
