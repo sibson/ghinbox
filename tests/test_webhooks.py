@@ -4,7 +4,7 @@ from mock import patch
 from basecase import GHInboxTestCase
 
 
-@patch('ghinbox.hooks.create_issue')
+@patch('ghinbox.webhooks.create_issue')
 class PostMarkInboundWebhookTestCase(GHInboxTestCase):
 
     def test_postmark_creates_issue(self, create_issue):

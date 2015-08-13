@@ -1,4 +1,5 @@
 from flask import Flask
 app = Flask(__name__)
 
-import ghinbox.hooks  # noqa
+import ghinbox.webhooks  # noqa
+import ghinbox.requestid  # noqa
