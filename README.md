@@ -5,6 +5,7 @@
   1. Run ```heroku addons:open postmark -a app-name```
   1. Select Inbound Mail from the webpage opened in the previous step
   1. Enter ```https://yourapp.herokuapp.com/hooks/postmark``` for the webhook URL
+  1. Send an email to the address provided by PostMark
 
 # Usage
 You can always retrieve the email address to submit issue to by running
