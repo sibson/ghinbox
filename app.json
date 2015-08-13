@@ -10,7 +10,8 @@
     ],
     "addons": [
         "papertrail",
-        "postmark"
+        "postmark",
+        "rollbar"
     ],
     "env": {
         "GH_USERNAME": {

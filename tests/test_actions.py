@@ -10,7 +10,6 @@ class CreateIssueTestCase(GHInboxTestCase):
     @patch('ghinbox.actions.login')
     def test_create_issue(self, login):
 
-        print app, app.config
         actions.create_issue('test subject', 'test body')
 
         login.assert_called_with('testuser', 'testpassword')

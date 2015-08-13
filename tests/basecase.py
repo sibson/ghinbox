@@ -11,6 +11,4 @@ class GHInboxTestCase(unittest.TestCase):
         app.config['ghpassword'] = 'testpassword'
         app.config['ghrepository'] = 'testuser/testrepo'
 
-        print app, app.config
-
         self.app = app.test_client()
