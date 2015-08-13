@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/sibson/ghinbox.svg?style=svg)](https://circleci.com/gh/sibson/ghinbox)
+
 # Deploy and Setup
 
   1. [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
