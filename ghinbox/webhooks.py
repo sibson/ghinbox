@@ -11,7 +11,7 @@ logger = get_logger()
 
 @app.route('/hooks/postmark', methods=['POST'])
 def postmark_incomming_hook():
-    # TODO HTTP Basic Auth
+    # TODO #2 HTTP Basic Auth
 
     inbound = request.json
     if not inbound:
@@ -24,7 +24,6 @@ def postmark_incomming_hook():
 
     logger.debug('creating issue', title=title)
 
-    # TODO taskify
-    create_issue(title, body)
+    create_issue.delay(title, body)
 
     return 'OK'

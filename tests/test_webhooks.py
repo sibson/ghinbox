@@ -14,4 +14,4 @@ class PostMarkInboundWebhookTestCase(GHInboxTestCase):
         }
         self.app.post('/hooks/postmark', data=json.dumps(data), content_type='application/json')
 
-        create_issue.assert_called_with('A test', 'Text Body')
+        create_issue.delay.assert_called_with('A test', 'Text Body')
