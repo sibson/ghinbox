@@ -19,7 +19,7 @@
             "description": "User to login to Github with"
         },
         "GH_PASSWORD": {
-            "description": "Password to login with, may need an application token if using 2FA"
+            "description": "Your password or preferablby a app token, https://developer.github.com/v3/auth/#working-with-two-factor-authentication"
         },
         "GH_REPOSITORY": {
             "description": "The username/repository to post new issues too"
