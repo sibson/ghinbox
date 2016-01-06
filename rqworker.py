@@ -1,5 +1,5 @@
 import rollbar
-from rq import Connection, Queue, Worker
+from flask.ext.rq import get_worker
 
 from ghinbox import app
 
@@ -27,8 +27,7 @@ def exception_handler(job, *exc_info):
 
 if __name__ == '__main__':
     rollbar.init(app.config['ROLLBAR_ACCESS_TOKEN'], 'production', handler='blocking')
-    with Connection():
-        q = Queue()
-        worker = Worker(q)
+    with app.app_context():
+        worker = get_worker()
         worker.push_exc_handler(exception_handler)
         worker.work()
