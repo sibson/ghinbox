@@ -1,5 +1,5 @@
-[![Build Status](http://img.shields.io/circleci/sibson/ghinbox.svg)](https://circleci.com/gh/sibson/ghinbox)
-[![Code Climate](http://img.shields.io/codeclimate/github/sibson/ghinbox.svg)](https://codeclimate.com/github/sibson/ghinbox)
+[![Test Status](https://circleci.com/gh/sibson/ghinbox.svg?style=svg)](https://circleci.com/gh/sibson/ghinbox)
+[![Code Climate](https://codeclimate.com/repos/568ca7c459754f7dc3000183/badges/f5f3486504565a83ecad/gpa.svg)](https://codeclimate.com/repos/568ca7c459754f7dc3000183/feed)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://sibson.mit-license.org)
 
 # Deploy and Setup
