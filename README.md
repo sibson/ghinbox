@@ -1,4 +1,7 @@
 [![Circle CI](https://circleci.com/gh/sibson/ghinbox.svg?style=svg)](https://circleci.com/gh/sibson/ghinbox)
+[![Build Status](http://img.shields.io/travis/sibson/ghinbox.svg)](https://travis-ci.org/sibson/ghinbox)
+[![Code Climate](http://img.shields.io/codeclimate/github/sibson/ghinbox.svg)](https://codeclimate.com/github/sibson/ghinbox)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://sibson.mit-license.org)
 
 # Deploy and Setup
 
