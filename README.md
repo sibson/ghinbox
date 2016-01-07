@@ -21,7 +21,8 @@ You can always retrieve the email address to submit issues to by running
 
     heroku config:get POSTMARK_INBOUND_ADDRESS
 
-You also might want to create an easily to remember email alias, rather than the random address Postmark provides.  If so Postmark has [instructions here](http://developer.postmarkapp.com/developer-process-domain.html).
+You also might want to create an easily to remember email alias, rather than the random address Postmark provides.
+Postmark has instructions to configure an alias using [Gmail](http://support.postmarkapp.com/article/785-configuring-a-custom-email-address-forward-with-gmail) or a [Custom Domain](http://developer.postmarkapp.com/developer-process-domain.html).
 
 # Development
 
