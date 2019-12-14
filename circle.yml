@@ -1,8 +1,0 @@
----
-dependencies:
-  override:
-    - pip install -r dev-requirements.txt 
-
-test:
-  override:
-    - py.test --ignore=venv --junit-xml=$CIRCLE_TEST_REPORTS/unittest/tests.xml
