@@ -2,7 +2,7 @@ Flask==1.0
 Flask-RQ==0.2
 Jinja2==2.8
 MarkupSafe==0.23
-Werkzeug==0.15.3
+Werkzeug==0.15.5
 blinker==1.4
 click==4.1
 github3.py==0.9.4
